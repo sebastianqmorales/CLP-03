@@ -3,7 +3,12 @@
 
 	import Dropdown from './Dropdown.svelte';
 	import FullLogoWhite from '../assets/fullLogoLightMode.svg';
-	import FullLogoBlack from '../assets/fullLogoDarkMode.svg';
+	import DataIcon from '../assets/data-icon.svg';
+	import UserIcon from '../assets/user-icon.svg';
+	import MissionIcon from '../assets/mission-icon-real.svg';
+	import AboutUsIcon from '../assets/mission-icon.svg';
+	import PressIcon from '../assets/press-icon.svg';
+	import CreatorIcon from '../assets/creator-icon.svg';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
 
@@ -16,19 +21,22 @@
 			title: 'Users',
 			dropDownItems: [
 				{
-					icon: '',
+					icon: UserIcon,
 					title: 'Audiences',
-					subDescription: 'For users who watch, read or listen to content.'
+					link: 'users',
+					subDescription: 'Users who watch, read or listen to content. '
 				},
 				{
-					icon: '',
+					icon: CreatorIcon,
+					link: 'creators',
 					title: 'Creators',
-					subDescription: 'For users who watch, read or listen to content.'
+					subDescription: 'For those who want to post their content on Cuatex. '
 				},
 				{
-					icon: '',
+					icon: DataIcon,
+					link: 'b2b',
 					title: 'B2B',
-					subDescription: 'For users who watch, read or listen to content.'
+					subDescription: 'Users or organizations who want to buy data.'
 				}
 			]
 		},
@@ -36,19 +44,22 @@
 			title: 'Resources',
 			dropDownItems: [
 				{
-					icon: '',
+					icon: AboutUsIcon,
 					title: 'About us',
-					subDescription: 'For users who watch, read or listen to content.'
+					link: 'about-us',
+					subDescription: 'Understand what we do, who we are and our tech.'
 				},
 				{
-					icon: '',
+					icon: MissionIcon,
+					link: 'mission',
 					title: 'Mission',
-					subDescription: 'For users who watch, read or listen to content.'
+					subDescription: 'Find out what we are striving for at Cuatex.'
 				},
 				{
-					icon: '',
+					icon: PressIcon,
+					link: 'press',
 					title: 'Press',
-					subDescription: 'For users who watch, read or listen to content.'
+					subDescription: 'Logos, quotes and more for press.'
 				}
 			]
 		}
@@ -59,9 +70,10 @@
 	<div class="flex gap-4 md:gap-7 items-center">
 		<img alt="icon" src={FullLogoWhite} />
 
-		<div class="">Home</div>
+		<a class="" href="/">Home</a>
 		<Dropdown {props} />
-		<div class="">Blog</div>
+		<a class="" href="/platform">Platform</a>
+		<a class="" href="/blog">Blog</a>
 	</div>
 	<label class="swap swap-rotate">
 		<!-- this hidden checkbox controls the state -->
