@@ -1,5 +1,5 @@
-<div>
-	<label class="swap swap-rotate">
+<button>
+	<label class="btn swap swap-rotate">
 		<!-- this hidden checkbox controls the state -->
 		<input type="checkbox" />
 
@@ -25,4 +25,4 @@
 			/></svg
 		>
 	</label>
-</div>
+</button>
