@@ -1,6 +1,7 @@
 <script>
 	// @ts-nocheck
 
+	import { onMount } from 'svelte';
 	import Dropdown from './Dropdown.svelte';
 	import FullLogoWhite from '../assets/fullLogoLightMode.svg';
 	import DataIcon from '../assets/data-icon.svg';
@@ -10,6 +11,7 @@
 	import PressIcon from '../assets/press-icon.svg';
 	import CreatorIcon from '../assets/creator-icon.svg';
 	import DarkMode from './darkMode.svelte';
+	import MobileMenuButton from './mobileMenuButton.svelte';
 
 	let windowWidth;
 
@@ -61,6 +63,23 @@
 			]
 		}
 	];
+
+	let dropdown;
+
+	// onMount(async () => {
+	// 	const handleClick = (event) => {
+	// 		if (!dropdown.contains(event.target)) {
+	// 			dropdown.removeAttribute('open');
+	// 		}
+	// 	};
+	// 	document.addEventListener('click', handleClick, false);
+
+	// 	return () => {
+	// 		document.removeEventListener('click', handleClick, false);
+	// 	};
+	// });
+
+	let isItOpen = false;
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
@@ -89,37 +108,20 @@
 			</a>
 			<a class="" href="/">Home</a>
 			<Dropdown {props} />
-			<a class="" href="/platform">Platform</a>
-			<a class="" href="/blog">Blog</a>
 		</div>
 
 		<div class="flex gap-5">
-			<label class=", swap swap-rotate">
-				<!-- this hidden checkbox controls the state -->
-				<input type="checkbox" />
-
-				<!-- hamburger icon -->
-				<svg
-					class="swap-off fill-current"
-					xmlns="http://www.w3.org/2000/svg"
-					width="32"
-					height="32"
-					viewBox="0 0 512 512"
-					><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg
-				>
-
-				<!-- close icon -->
-				<svg
-					class="swap-on fill-current"
-					xmlns="http://www.w3.org/2000/svg"
-					width="32"
-					height="32"
-					viewBox="0 0 512 512"
-					><polygon
-						points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
-					/></svg
-				>
-			</label>
+			<div
+				class="btn"
+				on:click={() => {
+					isItOpen = !isItOpen;
+				}}
+			>
+				<MobileMenuButton />
+			</div>
+			{#if isItOpen}
+				<div class="w-50 h-[200px] bg-base-200">test stuff</div>
+			{/if}
 			<DarkMode />
 			<div class="btn btn-primary">Sign up</div>
 		</div>
@@ -137,32 +139,17 @@
 		</div>
 
 		<div class="flex gap-5">
-			<label class=", swap swap-rotate">
-				<!-- this hidden checkbox controls the state -->
-				<input type="checkbox" />
+			<details class="dropdown">
+				<summary class="btn">
+					<MobileMenuButton />
+				</summary>
+				<ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+					<li class="text">test</li>
+					<li class="text">test</li>
+					<li class="text">test</li>
+				</ul>
+			</details>
 
-				<!-- hamburger icon -->
-				<svg
-					class="swap-off fill-current"
-					xmlns="http://www.w3.org/2000/svg"
-					width="32"
-					height="32"
-					viewBox="0 0 512 512"
-					><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg
-				>
-
-				<!-- close icon -->
-				<svg
-					class="swap-on fill-current"
-					xmlns="http://www.w3.org/2000/svg"
-					width="32"
-					height="32"
-					viewBox="0 0 512 512"
-					><polygon
-						points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
-					/></svg
-				>
-			</label>
 			<DarkMode />
 			<div class="btn btn-primary">Sign up</div>
 		</div>
