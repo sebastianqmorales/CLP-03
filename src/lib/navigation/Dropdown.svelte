@@ -34,8 +34,10 @@
 
 {#each props as props}
 	<details class="dropdown">
-		<summary class="cursor-pointer">{props.title}</summary>
-		<ul class="p-6 gap-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-[440px]">
+		<summary class="cursor-pointer font-semibold text-lg md:font-normal md:text-base"
+			>{props.title}</summary
+		>
+		<ul class="p-6 gap-2 shadow menu md:dropdown-content z-[1] bg-base-200 rounded-box w-[440px]">
 			{#each props.dropDownItems as links}
 				<li>
 					<a class="flex gap-4 items-start" href={links.link}>
