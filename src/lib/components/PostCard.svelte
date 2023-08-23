@@ -71,7 +71,7 @@
 	{:else if props == 'music'}
 		<div class="flex gap-3">
 			<img src={MusicThumbnail} alt="thumbnail" />
-			<div class="flex flex-col">
+			<div class="flex flex-col justify-evenly">
 				<div class="flex gap-2 items-center justify-between pt-1">
 					<div class="flex md:gap-3 gap-1">
 						<img src={MusicIcon} alt="icon" />

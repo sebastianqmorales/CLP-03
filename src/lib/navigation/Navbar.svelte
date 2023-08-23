@@ -101,7 +101,7 @@
 		</div>
 	</div>
 {:else if windowWidth > 640}
-	<div class="flex justify-between items-center md:px-10 md:py-4">
+	<div class="flex justify-between items-center px-2">
 		<div class="flex gap-4 md:gap-7 items-center">
 			<a href="/">
 				<img alt="Cuatex" src={FullLogoWhite} />
@@ -156,7 +156,7 @@
 		</div>
 	</div>
 {:else}
-	<div class="flex justify-between items-center md:px-10 md:py-4">
+	<div class="flex justify-between items-center px-2">
 		<div class="flex gap-4 md:gap-7 items-center">
 			<a href="/">
 				<img alt="Cuatex" src={FullLogoWhite} />

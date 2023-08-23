@@ -3,13 +3,16 @@
 	import demoIcon from '$lib/assets/demo-icon.svg';
 </script>
 
-<div data-theme="dark" class="flex gap-6 items-center px-3 h-[800px] background-image">
-	<div class="flex flex-col gap-14 w-full">
-		<div class="flex flex-col gap-4">
-			<div class="text-5xl">Support Creators.</div>
-			<div class="text-5xl">Make money scrolling.</div>
-			<div class="text-5xl">Never see ads.</div>
-			<div class="text-5xl">Defeat Big Brother.</div>
+<div
+	data-theme="dark"
+	class="flex flex-col md:flex md:flex-row gap-4 md:gap-6 items-center px-3 py-4 h-full md:h-[800px] background-image"
+>
+	<div class="flex flex-col gap-4 md:gap-14 w-full">
+		<div class="flex flex-col gap-1 md:gap-4">
+			<div class="text-4xl md:text-5xl">Support Creators.</div>
+			<div class="text-4xl md:text-5xl">Make money scrolling.</div>
+			<div class="text-4xl md:text-5xl">Never see ads.</div>
+			<div class="text-4xl md:text-5xl">Defeat Big Brother.</div>
 		</div>
 		<div class="description">
 			Cuatex is a micro-transaction based content platform where you can post any type of content
@@ -19,7 +22,7 @@
 				><a href="/" class="text-success underline"> money</a></strong
 			> and end corporate manipulation.
 		</div>
-		<div class="flex justify-evenly">
+		<div class="flex flex-col gap-3 md:flex md:flex-row md:justify-evenly">
 			<div class="btn">
 				<img src={demoIcon} alt="icon" />
 				Demo
