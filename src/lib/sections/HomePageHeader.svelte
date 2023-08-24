@@ -5,9 +5,9 @@
 
 <div
 	data-theme="dark"
-	class="flex flex-col md:flex md:flex-row gap-4 md:gap-6 items-center px-3 py-4 h-full md:h-[800px] background-image"
+	class="flex flex-col md:flex md:flex-row gap-4 md:gap-6 items-center px-3 py-4 lg:px-20 h-full md:h-[800px] background-image"
 >
-	<div class="flex flex-col gap-4 md:gap-14 w-full">
+	<div class="flex flex-col gap-4 md:gap-14 lg:w-2/4">
 		<div class="flex flex-col gap-1 md:gap-4">
 			<div class="text-4xl md:text-5xl">Support Creators.</div>
 			<div class="text-4xl md:text-5xl">Make money scrolling.</div>
@@ -22,7 +22,7 @@
 				><a href="/" class="text-success underline"> money</a></strong
 			> and end corporate manipulation.
 		</div>
-		<div class="flex flex-col gap-3 md:flex md:flex-row md:justify-evenly">
+		<div class="flex flex-col gap-3 md:flex md:flex-row md:justify-evenly lg:px-10">
 			<div class="btn">
 				<img src={demoIcon} alt="icon" />
 				Demo
@@ -30,7 +30,7 @@
 			<div class="btn btn-primary">Sign up</div>
 		</div>
 	</div>
-	<div class="flex flex-col gap-3">
+	<div class="flex flex-col gap-3 items-center lg:w-2/4">
 		<PostCard props={'video'} />
 		<PostCard props={'text'} />
 		<PostCard props={'music'} />

@@ -43,12 +43,12 @@
 		</div>
 	</div>
 </div>
-<div class="flex flex-col md:flex md:flex-row items-center py-10">
-	<div class="flex flex-col md:gap-10 md:px-10 md:basis-1/2">
+<div class="flex flex-col md:flex md:flex-row items-center py-10 gap-40">
+	<div class="flex flex-col gap-6 px-2 md:gap-10 md:px-10 md:basis-1/2">
 		<FeatureCard {props} />
 	</div>
 	<div
-		class="flex flex-col md:gap-8 bg-[#101828] md:basis-1/2 md:h-[500px] w-[200px] justify-center px-3 md:px-12 overflow-visible"
+		class="flex flex-col gap-3 md:gap-8 bg-[#101828] md:basis-1/2 h-[500px] md:h-[500px] w-full justify-center px-3 md:px-12 overflow-visible"
 	>
 		<CommentCards />
 	</div>
