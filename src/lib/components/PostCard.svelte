@@ -19,11 +19,13 @@
 		<div class="flex flex-col gap-1">
 			<img src={VideoThumbnail} alt="thumbnail" />
 			<div class="flex gap-2 items-center justify-between pt-1">
-				<div class="flex md:gap-3 gap-1">
-					<img src={VideoIcon} alt="icon" />
+				<div class="flex md:gap-3 gap-1 items-center">
+					<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This is video content">
+						<img src={VideoIcon} alt="icon" />
+					</div>
 					<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 				</div>
-				<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This post costs 3 cents to access.">
+				<div class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg" data-tip="This post costs 3 cents to access.">
 					<div class="badge badge-sm 2xl:badge-md badge-success  text-sm 2xl:text-lg">$0.03</div>
 				</div>
 			</div>
@@ -49,11 +51,13 @@
 	{:else if props == 'text'}
 		<div class="flex flex-col gap-1">
 			<div class="flex  items-center justify-between pt-1">
-				<div class="flex md:gap-3 gap-1">
-					<img src={TextIcon} alt="icon" />
+				<div class="flex md:gap-3 gap-1 items-center">
+					<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This is written content">
+						<img src={TextIcon} alt="icon" />
+					</div>
 					<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 				</div>
-				<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This post costs 1 cent to access.">
+				<div class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg" data-tip="This post costs 1 cent to access.">
 					<div class="badge badge-sm 2xl:badge-md badge-success  text-sm 2xl:text-lg">$0.01</div>
 				</div>
 			</div>
@@ -80,12 +84,14 @@
 			</div>
 		</div>
 	{:else if props == 'music'}
-		<div class="grid grid-cols-3 2xl:grid-cols-8">
+		<div class="grid grid-cols-3 2xl:grid-cols-8 items-center">
 			<img class="2xl:col-span-2" src={MusicThumbnail} alt="thumbnail" />
 			<div class="flex flex-col gap-3 col-span-2 2xl:col-span-6">
 				<div class="flex flex-row items-center justify-between pt-1">
-					<div class="flex md:gap-3 gap-1">
-						<img src={MusicIcon} alt="icon" />
+					<div class="flex md:gap-3 gap-1 items-center">
+						<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This is music content">
+							<img src={MusicIcon} alt="icon" />
+						</div>
 						<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 					</div>
 					<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This post costs 5 cents to access.">

@@ -5,7 +5,7 @@
 
 <div
 	data-theme="dark"
-	class="background-image flex flex-col md:flex md:flex-row gap-4 md:gap-6 items-center px-3 py-4 lg:px-20 h-full md:h-[800px] 2xl:px-[15%] justify-center"
+	class="background-image flex flex-col md:flex md:flex-row gap-4 md:gap-6 items-center px-3 py-4 lg:px-20 h-full md:h-screen 2xl:px-[15%] justify-center"
 >
 	<div class="flex flex-col gap-4 md:gap-14 lg:w-2/4 2xl:w-[600px]">
 		<div class="flex flex-col gap-1 md:gap-4">
@@ -14,7 +14,7 @@
 			<div class="text-4xl md:text-5xl 2xl:text-6xl">Never see ads.</div>
 			<div class="text-4xl md:text-5xl 2xl:text-6xl">Defeat Big Brother.</div>
 		</div>
-		<div class="2xl:text-lg">
+		<div class="2xl:text-xl">
 			Cuatex is a micro-transaction based content platform where you can post any type of content
 			and sell it as low as half a cent per view. We have engineered transparency into our product,
 			allowing you to create algorithms, vote and own your content. All of which create a better
