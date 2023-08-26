@@ -38,6 +38,11 @@
 </div>
 
 <style>
+	/* * {
+		outline: 1px solid red;
+		background-color: aqua;
+	} */
+
 	.background-image {
 		background-image: url('../assets/wavy-background2.svg');
 		background-repeat: repeat-x;

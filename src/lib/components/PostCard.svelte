@@ -14,19 +14,25 @@
 	export let props;
 </script>
 
-<div data-theme="light" class="w-[340px] 2xl:w-[500px] p-2 shadow-md">
+<div data-theme="light" class="w-[340px] sm:w-[400px] 2xl:w-[500px] p-2 shadow-md">
 	{#if props == 'video'}
 		<div class="flex flex-col gap-1">
 			<img src={VideoThumbnail} alt="thumbnail" />
 			<div class="flex gap-2 items-center justify-between pt-1">
 				<div class="flex md:gap-3 gap-1 items-center">
-					<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This is video content">
+					<div
+						class="tooltip tooltip-bottom cursor-pointer z-[-1]"
+						data-tip="This is video content"
+					>
 						<img src={VideoIcon} alt="icon" />
 					</div>
 					<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 				</div>
-				<div class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg" data-tip="This post costs 3 cents to access.">
-					<div class="badge badge-sm 2xl:badge-md badge-success  text-sm 2xl:text-lg">$0.03</div>
+				<div
+					class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg z-[-1]"
+					data-tip="This post costs 3 cents to access."
+				>
+					<div class="badge badge-sm 2xl:badge-md badge-success text-sm 2xl:text-lg">$0.03</div>
 				</div>
 			</div>
 			<div class="2xl:text-xl font-semibold">
@@ -42,7 +48,6 @@
 						<img src={DownvoteIcon} alt="icon" />
 						<div class="text-sm 2xl:text-lg">503</div>
 					</div>
-
 				</div>
 				<div class="text-secondary-content text-sm 2xl:text-lg">912 perspectives</div>
 				<div class="text-secondary-content text-sm 2xl:text-lg">12.3K views</div>
@@ -50,15 +55,18 @@
 		</div>
 	{:else if props == 'text'}
 		<div class="flex flex-col gap-1">
-			<div class="flex  items-center justify-between pt-1">
+			<div class="flex items-center justify-between pt-1">
 				<div class="flex md:gap-3 gap-1 items-center">
 					<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This is written content">
 						<img src={TextIcon} alt="icon" />
 					</div>
 					<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 				</div>
-				<div class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg" data-tip="This post costs 1 cent to access.">
-					<div class="badge badge-sm 2xl:badge-md badge-success  text-sm 2xl:text-lg">$0.01</div>
+				<div
+					class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg"
+					data-tip="This post costs 1 cent to access."
+				>
+					<div class="badge badge-sm 2xl:badge-md badge-success text-sm 2xl:text-lg">$0.01</div>
 				</div>
 			</div>
 			<div class="2xl:text-xl font-semibold">Saying Goodbye to Stack Overflow</div>
@@ -77,7 +85,6 @@
 						<img src={DownvoteIcon} alt="icon" />
 						<div class="text-sm 2xl:text-lg">503</div>
 					</div>
-					
 				</div>
 				<div class="text-secondary-content text-sm 2xl:text-lg">912 perspectives</div>
 				<div class="text-secondary-content text-sm 2xl:text-lg">12.3K views</div>
@@ -94,16 +101,19 @@
 						</div>
 						<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 					</div>
-					<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This post costs 5 cents to access.">
-						<div class="badge badge-sm 2xl:badge-md badge-success  text-sm 2xl:text-lg">$0.05</div>
+					<div
+						class="tooltip tooltip-bottom cursor-pointer"
+						data-tip="This post costs 5 cents to access."
+					>
+						<div class="badge badge-sm 2xl:badge-md badge-success text-sm 2xl:text-lg">$0.05</div>
 					</div>
 				</div>
 				<div class="md:text-base 2xl:text-xl font-semibold">Champions edit</div>
-				<div class="flex  justify-between">
+				<div class="flex justify-between">
 					<div class="flex gap-3">
 						<div class="tooltip tooltip-bottom tooltip-success cursor-pointer" data-tip="$0.005">
 							<div class="flex gap-1">
-								<UpVote/>
+								<UpVote />
 								<div class="text-sm 2xl:text-lg">1.2K</div>
 							</div>
 						</div>
