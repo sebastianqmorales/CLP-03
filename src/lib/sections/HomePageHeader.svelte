@@ -22,7 +22,9 @@
 				><a href="/" class="text-success underline"> money</a></strong
 			> and end corporate manipulation.
 		</div>
-		<div class="flex flex-col gap-3 md:flex md:flex-row md:justify-evenly lg:px-10">
+		<div
+			class="flex flex-col gap-3 md:flex md:flex-row md:justify-evenly md:justify-self-start lg:px-10"
+		>
 			<div class="btn 2xl:btn-lg">
 				<img src={demoIcon} alt="icon" />
 				Demo
