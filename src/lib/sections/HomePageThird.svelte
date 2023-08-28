@@ -35,6 +35,24 @@
 				'Our platform works with algorithms you create via our simplistic yet powerful Feed Builder. User control is engineered into our algorithms, voting and moderation features.',
 			link: '/'
 		}
+		// {
+		// 	title: 'Own the platform',
+		// 	gradient: 'blue',
+		// 	icon: AlgoIcon,
+		// 	subTitle: 'Algorithmic control',
+		// 	description:
+		// 		'Our platform works with algorithms you create via our simplistic yet powerful Feed Builder. User control is engineered into our algorithms, voting and moderation features.',
+		// 	link: '/'
+		// },
+		// {
+		// 	title: 'Own the platform',
+		// 	gradient: 'blue',
+		// 	icon: AlgoIcon,
+		// 	subTitle: 'Algorithmic control',
+		// 	description:
+		// 		'Our platform works with algorithms you create via our simplistic yet powerful Feed Builder. User control is engineered into our algorithms, voting and moderation features.',
+		// 	link: '/'
+		// }
 	];
 </script>
 
@@ -50,4 +68,6 @@
 	<div class="btn btn-primary normal-case">Create account</div>
 </div>
 
-<NewGradientCards {props} />
+<div class="px-3 py-6">
+	<NewGradientCards {props} />
+</div>

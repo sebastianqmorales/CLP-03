@@ -1,16 +1,49 @@
 <script>
+	// @ts-nocheck
+
+	import ArrowIcon from '$lib/assets/arrow-up-right.svg';
+	import ChevronLeft from '$lib/assets/chevron-left-icon.svg';
+	import ChevronRight from '$lib/assets/chevron-right-icon.svg';
+
 	/**
 	 * @type {any}
 	 */
 	export let props;
 
-	import ArrowIcon from '$lib/assets/arrow-up-right.svg';
+	/**
+	 * @type {number}
+	 */
+	let sliderPosition = 0;
+	let slideWidth = 330;
+	let slideGap = 32;
+	let sliderRef;
+	let currentSlide = 0;
+
+	$: {
+		currentSlide = Math.floor(sliderPosition / (slideWidth + slideGap));
+
+		console.log(currentSlide);
+	}
+
+	const scrollToSlide = (slider, slideIndex) => {
+		if (!slider) return;
+		slider.scrollTo({
+			left: slideIndex * (slideWidth + slideGap),
+			behavior: 'smooth'
+		});
+	};
 </script>
 
 <div class="h-[500px] overflow-hidden">
-	<ul class="flex h-[540px] gap-4 px-3 overflow-x-auto snap-x snap-mandatory">
+	<ul
+		bind:this={sliderRef}
+		on:scroll={(e) => {
+			sliderPosition = e.currentTarget.scrollLeft;
+		}}
+		class="flex h-[540px] overflow-x-auto snap-x snap-mandatory"
+	>
 		{#each props as props}
-			<li class="snap-center snap-always">
+			<li class="snap-start snap-always mr-4">
 				<div class="flex flex-col gap-8 w-[330px] h-[450px] p-6 {props.gradient}-gradient">
 					<div class="flex gap-2 items-center">
 						<img class="h-[33px] w-auto" src={props.icon} alt="icon" />
@@ -29,6 +62,26 @@
 			</li>
 		{/each}
 	</ul>
+</div>
+<div class="flex gap-5">
+	<button
+		on:click={() => {
+			scrollToSlide(sliderRef, currentSlide - 1);
+		}}
+		class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
+	>
+		<span class="sr-only">Previous slide</span>
+		<img src={ChevronLeft} alt="chevron left" />
+	</button>
+	<button
+		on:click={() => {
+			scrollToSlide(sliderRef, currentSlide + 1);
+		}}
+		class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
+	>
+		<span class="sr-only">Next slide</span>
+		<img src={ChevronRight} alt="chevron left" />
+	</button>
 </div>
 
 <style>

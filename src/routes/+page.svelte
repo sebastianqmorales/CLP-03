@@ -4,6 +4,9 @@
 	import HomePageThird from '$lib/sections/HomePageThird.svelte';
 </script>
 
-<HomePageHeader />
-<HomePageSecond />
-<HomePageThird/>
+<!-- overflow hidden needed as a workaround for HomePageThird NewGradientCards component -->
+<div class="overflow-hidden">
+	<HomePageHeader />
+	<HomePageSecond />
+	<HomePageThird />
+</div>
