@@ -40,6 +40,8 @@
 			</div>
 		</div>
 		<div class="divider" />
-		<div class="text-secondary-content self-center">© 2023 Cuatex. All rights reserverd.</div>
+		<div class="text-secondary-content self-center">
+			© {new Date().getFullYear()} Cuatex. All rights reserverd.
+		</div>
 	</div>
 </div>
