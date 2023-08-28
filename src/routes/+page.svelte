@@ -5,7 +5,7 @@
 </script>
 
 <!-- overflow hidden needed as a workaround for HomePageThird NewGradientCards component -->
-<div class="overflow-hidden">
+<div class="overflow-x-hidden">
 	<HomePageHeader />
 	<HomePageSecond />
 	<HomePageThird />

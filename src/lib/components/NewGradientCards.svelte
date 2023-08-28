@@ -10,19 +10,16 @@
 	 */
 	export let props;
 
-	/**
-	 * @type {number}
-	 */
-	let sliderPosition = 0;
+	let sliderPosition = null;
 	let slideWidth = 330;
-	let slideGap = 32;
+	let slideGap = 16;
 	let sliderRef;
-	let currentSlide = 0;
+	let currentSlide;
 
 	$: {
-		currentSlide = Math.floor(sliderPosition / (slideWidth + slideGap));
+		currentSlide = Math.round(sliderPosition / (slideWidth + slideGap));
 
-		console.log(currentSlide);
+		console.log(`Slider position is: ${sliderPosition}, Current slide is: ${currentSlide}`);
 	}
 
 	const scrollToSlide = (slider, slideIndex) => {
@@ -43,7 +40,7 @@
 		class="flex h-[540px] overflow-x-auto snap-x snap-mandatory"
 	>
 		{#each props as props}
-			<li class="snap-start snap-always mr-4">
+			<li class="snap-start snap-always mr-4 last:mr-0">
 				<div class="flex flex-col gap-8 w-[330px] h-[450px] p-6 {props.gradient}-gradient">
 					<div class="flex gap-2 items-center">
 						<img class="h-[33px] w-auto" src={props.icon} alt="icon" />
@@ -68,7 +65,7 @@
 		on:click={() => {
 			scrollToSlide(sliderRef, currentSlide - 1);
 		}}
-		class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
+		class="disabled:border-gray-400 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
 	>
 		<span class="sr-only">Previous slide</span>
 		<img src={ChevronLeft} alt="chevron left" />
