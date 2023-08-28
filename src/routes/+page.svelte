@@ -7,6 +7,8 @@
 <!-- overflow hidden needed as a workaround for HomePageThird NewGradientCards component -->
 <div class="overflow-x-hidden">
 	<HomePageHeader />
-	<HomePageSecond />
+	<div class="mb-28">
+		<HomePageSecond />
+	</div>
 	<HomePageThird />
 </div>

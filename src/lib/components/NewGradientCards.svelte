@@ -41,12 +41,12 @@
 	>
 		{#each props as props}
 			<li class="snap-start snap-always mr-4 last:mr-0">
-				<div class="flex flex-col gap-8 w-[330px] h-[450px] p-6 {props.gradient}-gradient">
+				<div class="flex flex-col gap-12 w-[330px] h-[450px] p-6 {props.gradient}-gradient">
 					<div class="flex gap-2 items-center">
 						<img class="h-[33px] w-auto" src={props.icon} alt="icon" />
 						<div class="text-3xl text-white">{props.title}</div>
 					</div>
-					<div class="flex flex-col custom-blur py-8 px-6 gap-4">
+					<div class="flex flex-col custom-blur py-8 px-6 gap-6">
 						<div class="text-2xl text-white">{props.subTitle}</div>
 						<div class="text-white">{props.description}</div>
 

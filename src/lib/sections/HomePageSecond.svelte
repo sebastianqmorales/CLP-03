@@ -30,7 +30,7 @@
 	];
 </script>
 
-<div class="flex flex-col px-3 py-10 gap-12">
+<div class="flex flex-col px-3 pt-10 gap-12">
 	<div class="flex flex-col gap-4">
 		<div>
 			<div class="sub-text text-secondary">The difference</div>
@@ -44,7 +44,7 @@
 	</div>
 </div>
 <div class="flex flex-col md:flex md:flex-row items-center py-10 gap-40">
-	<div class="flex flex-col gap-6 px-2 md:gap-10 md:px-10 md:basis-1/2">
+	<div class="flex flex-col gap-12 px-2 md:gap-10 md:px-10 md:basis-1/2">
 		<FeatureCard {props} />
 	</div>
 	<div

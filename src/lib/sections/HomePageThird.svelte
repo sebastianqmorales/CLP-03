@@ -57,7 +57,7 @@
 </script>
 
 <div class="px-3 py-10 flex flex-col md:flex md:flex-row md:justify-between">
-	<div class="flex flex-col md:w-[400px]">
+	<div class="flex flex-col gap-3 mb-3 md:w-[400px]">
 		<div class="text-4xl font-semibold">Not just another social media platform.</div>
 		<div>
 			Our product has compounding value. Each feature builds off the next, all starting from our
