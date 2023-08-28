@@ -29,6 +29,12 @@
 			behavior: 'smooth'
 		});
 	};
+
+	const scrolledToEndOfSlider = () => {
+		if (!sliderRef) return false;
+		return sliderRef.scrollWidth - sliderRef.scrollLeft - sliderRef.clientWidth === 0;
+	};
+	// console.log(sliderRef.scrollWidth, sliderRef.scrollLeft, sliderRef.clientWidth);
 </script>
 
 <div class="h-[500px] overflow-hidden">
@@ -62,19 +68,21 @@
 </div>
 <div class="flex gap-5">
 	<button
+		disabled={currentSlide === 0}
 		on:click={() => {
 			scrollToSlide(sliderRef, currentSlide - 1);
 		}}
-		class="disabled:border-gray-400 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
+		class="disabled:border-base-300 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
 	>
 		<span class="sr-only">Previous slide</span>
 		<img src={ChevronLeft} alt="chevron left" />
 	</button>
 	<button
+		disabled={currentSlide === props.length - 1}
 		on:click={() => {
 			scrollToSlide(sliderRef, currentSlide + 1);
 		}}
-		class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
+		class="disabled:border-base-300 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
 	>
 		<span class="sr-only">Next slide</span>
 		<img src={ChevronRight} alt="chevron left" />
