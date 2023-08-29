@@ -21,13 +21,13 @@
 			<div class="flex flex-col gap-4 text-white text-lg">
 				<a href="/">Home</a>
 				<div class="flex flex-col gap-1">
-					<div class=" text-secondary-content">Users</div>
+					<div class="text-base text-secondary-content">Users</div>
 					<a href="/">Audiences</a>
 					<a href="/">Creators</a>
 					<a href="/">B2B</a>
 				</div>
 				<div class="flex flex-col">
-					<div class=" text-secondary-content">Resources</div>
+					<div class="text-base text-secondary-content">Resources</div>
 					<a href="/">About Us</a>
 					<a href="/">Mission</a>
 					<a href="/">Press</a>
