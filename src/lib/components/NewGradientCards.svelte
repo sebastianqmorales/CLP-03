@@ -31,13 +31,13 @@
 	};
 </script>
 
-<div class="h-[500px] overflow-hidden">
+<div class="h-[500px] overflow-hidden flex flex-col lg:items-center">
 	<ul
 		bind:this={sliderRef}
 		on:scroll={(e) => {
 			sliderPosition = e.currentTarget.scrollLeft;
 		}}
-		class="flex h-[540px] overflow-x-auto snap-x snap-mandatory"
+		class="flex h-[540px] overflow-x-hidden snap-x snap-mandatory"
 	>
 		{#each props as props}
 			<li class="snap-start snap-always mr-4 last:mr-0">
@@ -59,26 +59,26 @@
 			</li>
 		{/each}
 	</ul>
-</div>
-<div class="flex gap-5">
-	<button
-		on:click={() => {
-			scrollToSlide(sliderRef, currentSlide - 1);
-		}}
-		class="disabled:border-gray-400 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
-	>
-		<span class="sr-only">Previous slide</span>
-		<img src={ChevronLeft} alt="chevron left" />
-	</button>
-	<button
-		on:click={() => {
-			scrollToSlide(sliderRef, currentSlide + 1);
-		}}
-		class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
-	>
-		<span class="sr-only">Next slide</span>
-		<img src={ChevronRight} alt="chevron left" />
-	</button>
+	<div class="flex gap-5">
+		<button
+			on:click={() => {
+				scrollToSlide(sliderRef, currentSlide - 1);
+			}}
+			class="disabled:border-gray-400 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
+		>
+			<span class="sr-only">Previous slide</span>
+			<img src={ChevronLeft} alt="chevron left" />
+		</button>
+		<button
+			on:click={() => {
+				scrollToSlide(sliderRef, currentSlide + 1);
+			}}
+			class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
+		>
+			<span class="sr-only">Next slide</span>
+			<img src={ChevronRight} alt="chevron left" />
+		</button>
+	</div>
 </div>
 
 <style>

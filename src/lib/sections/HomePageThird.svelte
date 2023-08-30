@@ -56,10 +56,12 @@
 	];
 </script>
 
-<div class="px-3 py-10 flex flex-col md:flex md:flex-row md:justify-between">
-	<div class="flex flex-col gap-3 mb-3 md:w-[400px]">
+<div
+	class="px-3 py-10 flex flex-col md:flex md:flex-row md:justify-between lg:w-[1000px] lg:mx-auto lg:gap-16"
+>
+	<div class="flex flex-col gap-3 md:gap-6 mb-3">
 		<div class="text-4xl font-semibold">Not just another social media platform.</div>
-		<div>
+		<div class="text-secondary-content lg:text-lg">
 			Our product has compounding value. Each feature builds off the next, all starting from our
 			business model.
 		</div>
