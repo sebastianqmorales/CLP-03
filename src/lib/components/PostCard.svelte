@@ -14,14 +14,17 @@
 	export let props;
 </script>
 
-<div data-theme="light" class="w-[340px] sm:w-[400px] 2xl:w-[500px] p-2 shadow-md">
+<div
+	data-theme="light"
+	class="w-full sm:w-[450px] md:w-[400px] 2xl:w-[500px] p-2 shadow-md rounded-sm"
+>
 	{#if props == 'video'}
 		<div class="flex flex-col gap-1">
 			<img src={VideoThumbnail} alt="thumbnail" />
 			<div class="flex gap-2 items-center justify-between pt-1">
 				<div class="flex md:gap-3 gap-1 items-center">
 					<div
-						class="tooltip tooltip-bottom cursor-pointer z-[-1]"
+						class="tooltip tooltip-right lg:tooltip-bottom cursor-pointer"
 						data-tip="This is video content"
 					>
 						<img src={VideoIcon} alt="icon" />
@@ -29,7 +32,7 @@
 					<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 				</div>
 				<div
-					class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg z-[-1]"
+					class="tooltip tooltip-left lg:tooltip-bottom cursor-pointer 2xl:text-lg"
 					data-tip="This post costs 3 cents to access."
 				>
 					<div class="badge badge-sm 2xl:badge-md badge-success text-sm 2xl:text-lg">$0.03</div>
@@ -57,13 +60,16 @@
 		<div class="flex flex-col gap-1">
 			<div class="flex items-center justify-between pt-1">
 				<div class="flex md:gap-3 gap-1 items-center">
-					<div class="tooltip tooltip-bottom cursor-pointer" data-tip="This is written content">
+					<div
+						class="tooltip tooltip-right lg:tooltip-bottom cursor-pointer"
+						data-tip="This is written content"
+					>
 						<img src={TextIcon} alt="icon" />
 					</div>
 					<div class="text-secondary-content text-sm 2xl:text-lg">20 January 2023</div>
 				</div>
 				<div
-					class="tooltip tooltip-bottom cursor-pointer 2xl:text-lg"
+					class="tooltip tooltip-left lg:tooltip-bottom cursor-pointer 2xl:text-lg"
 					data-tip="This post costs 1 cent to access."
 				>
 					<div class="badge badge-sm 2xl:badge-md badge-success text-sm 2xl:text-lg">$0.01</div>

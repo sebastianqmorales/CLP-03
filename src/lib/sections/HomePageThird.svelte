@@ -70,6 +70,6 @@
 	<div class="btn btn-primary normal-case">Create account</div>
 </div>
 
-<div class="px-3 py-6">
+<div class="px-3 pt-6 pb-20">
 	<NewGradientCards {props} />
 </div>

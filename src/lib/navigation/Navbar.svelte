@@ -198,7 +198,7 @@
 
 			{#if isItOpen}
 				<div
-					class="w-[100vw] h-auto bg-base-200 absolute top-12 right-0 flex flex-col px-1 py-2 gap-2"
+					class="w-[100vw] h-auto bg-base-200 absolute top-12 right-0 flex flex-col px-1 py-2 gap-2 z-20"
 				>
 					<Dropdown {props} />
 					<a class="font-semibold text-lg md:font-normal md:text-base" href="/platform">Platform</a>

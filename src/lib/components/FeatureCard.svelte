@@ -9,7 +9,7 @@
 
 {#each props as props}
 	<div class="flex items-start gap-4">
-		<img src={props.icon} alt="icon" />
+		<img class="w-10 h-auto lg:w-20" src={props.icon} alt="icon" />
 		<div class="flex flex-col gap-2">
 			<div class="text-xl font-semibold">{props.title}</div>
 			<div class="text-secondary-content lg:text-lg">

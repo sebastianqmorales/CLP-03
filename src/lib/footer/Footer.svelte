@@ -12,21 +12,21 @@
 		>
 			<div class="flex flex-col gap-1">
 				<div class="text-base text-secondary-content">Users</div>
-				<a href="/">Audiences</a>
-				<a href="/">Creators</a>
-				<a href="/">B2B</a>
+				<a class="hover:underline" href="/">Audiences</a>
+				<a class="hover:underline" href="/">Creators</a>
+				<a class="hover:underline" href="/">B2B</a>
 			</div>
-			<div class="flex flex-col">
+			<div class="flex flex-col gap-1">
 				<div class="text-base text-secondary-content">Resources</div>
 				<a href="/">About Us</a>
 				<a href="/">Mission</a>
 				<a href="/">Press</a>
 			</div>
-			<div class="flex flex-col">
+			<div class="flex flex-col gap-1">
 				<div class="text-base text-secondary-content">Company</div>
-				<a href="/">Blog</a>
-				<a href="/">Platform</a>
-				<a href="/">Sign up</a>
+				<a class="hover:underline" href="/">Blog</a>
+				<a class="hover:underline" href="/">Platform</a>
+				<a class="hover:underline" href="/">Sign up</a>
 			</div>
 		</div>
 
