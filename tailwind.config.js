@@ -21,14 +21,17 @@ export default {
 					neutral: '#2a323c',
 					accent: '#026AA2',
 					success: '#039855',
-					secondary: '#FE7B43'
+					secondary: '#FE7B43',
+					'.opposite-theme': {
+						'background-color': '#ffffff'
+					}
 				},
 				light: {
 					...require('daisyui/src/theming/themes')['[data-theme=light]'],
 					primary: '#FF550D',
 					'primary-content': '#ffff',
 					secondary: '#FE7B43',
-					'secondary-content': '#AAAAAA',
+					'secondary-content': '#475467',
 					accent: '#026AA2',
 					'accent-content': '#07312D',
 					neutral: '#2B3440',
@@ -36,7 +39,10 @@ export default {
 					'base-100': '#ffffff',
 					'base-200': '#F2F2F2',
 					'base-300': '#E5E6E6',
-					'base-content': '#1f2937'
+					'base-content': '#1f2937',
+					'.opposite-theme': {
+						'background-color': '#101828'
+					}
 				}
 			}
 		]

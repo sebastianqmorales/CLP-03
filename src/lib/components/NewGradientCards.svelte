@@ -37,7 +37,7 @@
 		on:scroll={(e) => {
 			sliderPosition = e.currentTarget.scrollLeft;
 		}}
-		class="flex h-[540px] overflow-x-hidden snap-x snap-mandatory"
+		class="flex h-[540px] overflow-x-auto snap-x snap-mandatory"
 	>
 		{#each props as props}
 			<li class="snap-start snap-always mr-4 last:mr-0">

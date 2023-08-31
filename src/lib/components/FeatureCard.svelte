@@ -12,7 +12,7 @@
 		<img src={props.icon} alt="icon" />
 		<div class="flex flex-col gap-2">
 			<div class="text-xl font-semibold">{props.title}</div>
-			<div class="">
+			<div class="text-secondary-content lg:text-lg">
 				{props.description}
 			</div>
 			<a

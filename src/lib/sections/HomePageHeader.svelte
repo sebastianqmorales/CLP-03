@@ -5,7 +5,7 @@
 
 <div
 	data-theme="dark"
-	class="background-image flex flex-col md:flex md:flex-row gap-4 md:gap-6 items-center px-3 py-4 lg:px-20 h-full md:h-screen 2xl:px-[15%] justify-center"
+	class="background-image flex flex-col md:flex md:flex-row gap-4 md:gap-6 items-center px-3 py-4 lg:px-20 lg:py-20 h-full 2xl:px-[15%] justify-center"
 >
 	<div class="flex flex-col gap-4 md:gap-14 lg:w-2/4 2xl:w-[600px]">
 		<div class="flex flex-col gap-1 md:gap-4">

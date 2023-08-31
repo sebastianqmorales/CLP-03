@@ -31,25 +31,25 @@
 </script>
 
 <div class="flex flex-col px-3 pt-10 gap-12">
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-4 lg:w-[700px] lg:pl-[68px]">
 		<div>
 			<div class="sub-text text-secondary">The difference</div>
 			<div class="text-4xl font-semibold">The first Data Dignity Platform</div>
 		</div>
-		<div class="">
+		<div class="text-secondary-content lg:text-lg">
 			Your data is valuable. It drives the billion dollar internet economy. We are the first social
 			content platform to give you access to make money from this market. Enabling privacy, earning
 			you money, and creating a higher quality, user owned internet.
 		</div>
 	</div>
-</div>
-<div class="flex flex-col md:flex md:flex-row items-center py-10 gap-40">
-	<div class="flex flex-col gap-12 px-2 md:gap-10 md:px-10 md:basis-1/2">
-		<FeatureCard {props} />
-	</div>
-	<div
-		class="flex flex-col gap-3 md:gap-8 bg-[#101828] md:basis-1/2 h-[500px] md:h-[500px] w-full justify-center px-3 md:px-12 overflow-visible"
-	>
-		<CommentCards />
+	<div class="flex flex-col md:flex md:flex-row items-center py-10 gap-40">
+		<div class="flex flex-col gap-12 px-2 md:gap-10 md:px-10 md:basis-1/2">
+			<FeatureCard {props} />
+		</div>
+		<div
+			class="flex flex-col gap-3 md:gap-8 opposite-theme md:basis-1/2 h-[500px] md:h-[500px] w-full justify-center px-3 md:px-12 overflow-visible"
+		>
+			<CommentCards />
+		</div>
 	</div>
 </div>
