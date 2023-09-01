@@ -18,9 +18,9 @@
 			</div>
 			<div class="flex flex-col gap-1">
 				<div class="text-base text-secondary-content">Resources</div>
-				<a href="/">About Us</a>
-				<a href="/">Mission</a>
-				<a href="/">Press</a>
+				<a class="hover:underline" href="/">About Us</a>
+				<a class="hover:underline" href="/">Mission</a>
+				<a class="hover:underline" href="/">Press</a>
 			</div>
 			<div class="flex flex-col gap-1">
 				<div class="text-base text-secondary-content">Company</div>
