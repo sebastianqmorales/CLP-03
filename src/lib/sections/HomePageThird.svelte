@@ -1,5 +1,4 @@
 <script>
-	import GradientCards from '$lib/components/GradientCards.svelte';
 	import NewGradientCards from '$lib/components/NewGradientCards.svelte';
 	import MoneyIcon from '$lib/assets/dollar-icon.svg';
 	import EyeIcon from '$lib/assets/eye-off.svg';
