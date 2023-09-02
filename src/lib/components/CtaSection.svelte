@@ -14,6 +14,7 @@
 			method="POST"
 			data-netlify="true"
 			action="/success"
+			netlify-honeypot="nbot-field"
 		>
 			<input type="hidden" name="form-name" value="email" />
 			<input
