@@ -8,9 +8,21 @@
 				Join over <span class="text-secondary">313</span> users who want to challenge the status quo.
 			</div>
 		</div>
-		<div class="flex flex-col gap-4 md:flex md:flex-row">
-			<input type="email" placeholder="Enter your email" class="input input-bordered" />
-			<div class="btn btn-primary normal-case">Subscribe</div>
-		</div>
+		<form
+			class="flex flex-col gap-4 md:flex md:flex-row"
+			name="email"
+			method="POST"
+			data-netlify="true"
+		>
+			<input type="hidden" name="form-name" value="email" />
+			<input
+				type="text"
+				name="email"
+				id="email"
+				placeholder="Enter your email"
+				class="input input-bordered"
+			/>
+			<input class="btn btn-primary normal-case" value="Submit" type="submit" />
+		</form>
 	</div>
 </div>
