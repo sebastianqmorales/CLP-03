@@ -46,7 +46,7 @@
 						<img class="h-[33px] w-auto" src={props.icon} alt="icon" />
 						<div class="text-3xl text-white">{props.title}</div>
 					</div>
-					<div class="flex flex-col custom-blur py-8 px-6 gap-6">
+					<div class="flex flex-col custom-blur py-8 px-6 gap-6  hover:shadow-md hover:scale-105">
 						<div class="text-2xl text-white">{props.subTitle}</div>
 						<div class="text-white">{props.description}</div>
 
