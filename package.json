@@ -30,6 +30,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/auth-helpers-sveltekit": "^0.10.2",
+		"@supabase/supabase-js": "^2.33.1",
+		"dotenv": "^16.3.1",
 		"theme-change": "^2.5.0"
 	}
 }
