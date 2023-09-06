@@ -24,5 +24,15 @@ export const actions = {
 		}
 
 		throw redirect(303, '/auth/admin');
+	},
+
+	logout: async ({ locals }) => {
+		const { error: err } = await locals.supabase.auth.signOut();
+
+		if (err) {
+			throw error(500, 'Something went wrong logging you out.');
+		}
+
+		throw redirect(303, '/');
 	}
 };
