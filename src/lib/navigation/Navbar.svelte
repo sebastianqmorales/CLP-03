@@ -1,7 +1,6 @@
 <script>
 	// @ts-nocheck
 
-	import { onMount } from 'svelte';
 	import Dropdown from './Dropdown.svelte';
 	import FullLogoWhite from '../assets/fullLogoLightMode.svg';
 	import DataIcon from '../assets/data-icon.svg';
@@ -11,7 +10,6 @@
 	import PressIcon from '../assets/press-icon.svg';
 	import CreatorIcon from '../assets/creator-icon.svg';
 	import DarkMode from './darkMode.svelte';
-	import MobileMenuButton from './mobileMenuButton.svelte';
 
 	let windowWidth;
 
@@ -89,7 +87,6 @@
 			<a href="/">
 				<img alt="Cuatex" src={FullLogoWhite} />
 			</a>
-			<a class="" href="/">Home</a>
 			<Dropdown {props} />
 			<a class="" href="/platform">Platform</a>
 			<a class="" href="/blog">Blog</a>
@@ -97,16 +94,15 @@
 
 		<div class="flex gap-5">
 			<DarkMode />
-			<div class="btn btn-primary">Sign up</div>
+			<div class="btn btn-primary normal-case">Sign up for free</div>
 		</div>
 	</div>
 {:else if windowWidth > 640}
-	<div class="flex justify-between items-center px-2">
+	<div class="flex justify-between items-center px-2 py-1">
 		<div class="flex gap-4 md:gap-7 items-center">
 			<a href="/">
 				<img alt="Cuatex" src={FullLogoWhite} />
 			</a>
-			<a class="" href="/">Home</a>
 		</div>
 
 		<div class="flex gap-5">
@@ -152,7 +148,7 @@
 				</div>
 			{/if}
 			<DarkMode />
-			<div class="btn btn-primary">Sign up</div>
+			<div class="btn btn-primary normal-case">Sign up</div>
 		</div>
 	</div>
 {:else}
@@ -203,7 +199,7 @@
 					<Dropdown {props} />
 					<a class="font-semibold text-lg md:font-normal md:text-base" href="/platform">Platform</a>
 					<a class="font-semibold text-lg md:font-normal md:text-base" href="/blog">Blog</a>
-					<div class="btn btn-primary">Sign up</div>
+					<div class="btn btn-primary normal-case">Sign up for free</div>
 				</div>
 			{/if}
 			<DarkMode />
