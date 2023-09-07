@@ -6,7 +6,7 @@ import { fail, redirect } from '@sveltejs/kit';
 export const actions = {
 	login: async ({ request, locals }) => {
 		const body = Object.fromEntries(await request.formData());
-		console.log(body.email, body.password);
+
 		const { error: err } = await locals.supabase.auth.signInWithPassword({
 			email: body.email,
 			password: body.password
@@ -33,6 +33,6 @@ export const actions = {
 			throw error(500, 'Something went wrong logging you out.');
 		}
 
-		throw redirect(303, '/');
+		throw redirect(303, '/auth');
 	}
 };
