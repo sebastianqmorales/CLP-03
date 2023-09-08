@@ -32,6 +32,11 @@
 	"dependencies": {
 		"@supabase/auth-helpers-sveltekit": "^0.10.2",
 		"@supabase/supabase-js": "^2.33.1",
+		"@tiptap/core": "^2.1.8",
+		"@tiptap/extension-blockquote": "^2.1.8",
+		"@tiptap/extension-placeholder": "^2.1.8",
+		"@tiptap/pm": "^2.1.8",
+		"@tiptap/starter-kit": "^2.1.8",
 		"dotenv": "^16.3.1",
 		"theme-change": "^2.5.0"
 	}
