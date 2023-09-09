@@ -3,6 +3,7 @@
 
 	import { onMount, onDestroy } from 'svelte';
 	import { Editor } from '@tiptap/core';
+	import extractFormDataUtil from '$lib/util/extractFormDataUtil';
 	import StarterKit from '@tiptap/starter-kit';
 	import Placeholder from '@tiptap/extension-placeholder';
 	import blockquoteIcon from '$lib/assets/blockquote-icon.svg';
@@ -13,9 +14,11 @@
 	import orderedListIcon from '$lib/assets/olist-icon.svg';
 	import unorderdListIcon from '$lib/assets/ulist-icon.svg';
 	import Blockquote from '@tiptap/extension-blockquote';
+	import { stringify } from 'postcss';
 
 	let element;
 	let editor;
+	let form;
 
 	onMount(() => {
 		editor = new Editor({
@@ -69,13 +72,40 @@
 		inputs, title
 		inputs, excerpt
 		tiptap editor needs to be equal to body.content
- -->
-<form action="?/submitBlog" method="POST" class="form-control gap-6 px-20 my-10">
+	-->
+<form
+	bind:this={form}
+	class="form-control gap-6 px-20 my-10"
+	on:submit|preventDefault={(e) => {
+		const formData = extractFormDataUtil(e);
+		const editorData = String(editor.getHTML());
+
+		const BLOG = {
+			form: formData,
+			editor: editorData
+		};
+
+		const response = fetch('../api/postBlog', {
+			method: 'POST',
+			body: JSON.stringify(BLOG),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+
+		editor.commands.clearContent();
+		form.reset();
+		return console.log(BLOG);
+	}}
+>
 	<div class="flex flex-col gap-1">
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label class="text-2xl">Create a Blog post</label>
 		<!-- svelte-ignore a11y-label-has-associated-control -->
-		<label class="text-secondary-content">This post will show up on the Blog page.</label>
+		<label class="text-secondary-content text-sm"
+			>This post will show up on the Blog page. Title will be the title of the blog, url slug and
+			head title. Excerpt will be the head description.</label
+		>
 	</div>
 	<input
 		class="bg-base-100 border-y border-y-base-300 w-full py-4 text-xl placeholder:text-2xl outline-none"
@@ -166,8 +196,14 @@
 		{/if}
 		<div class="element-wrapper adaptive" bind:this={element} />
 	</div>
-	<div class="flex justify-between">
-		<button class="btn btn-neutral rounded-none normal-case">Cancel</button>
+	<div class="flex justify-between md:px-20">
+		<button
+			on:click={() => {
+				editor.commands.clearContent();
+			}}
+			type="reset"
+			class="btn btn-neutral rounded-none normal-case">Cancel</button
+		>
 		<button type="submit" class="btn btn-primary rounded-none normal-case">Submit blog post</button>
 	</div>
 </form>
