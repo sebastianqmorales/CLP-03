@@ -17,13 +17,13 @@ export async function POST({ request, locals }) {
 	const BLOG = await request.json();
 
 	const BLOG_POST = {
-		title: BLOG.form.title,
-		excerpt: BLOG.form.excerpt,
-		content: BLOG.editor,
-		author: author[0].admin_name
+		blog_title: BLOG.form.title,
+		blog_excerpt: BLOG.form.excerpt,
+		blog_content: BLOG.editor,
+		blog_author: author[0].admin_name
 	};
 
-	//  (await locals.supabase.from('blogs').insert(blog)).error;
-	console.log(BLOG_POST);
-	return json({ status: 201 });
+	const { status, statusText } = await locals.supabase.from('blogs').insert(BLOG_POST);
+
+	return json({ status, statusText });
 }

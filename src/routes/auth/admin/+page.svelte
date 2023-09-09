@@ -76,7 +76,7 @@
 <form
 	bind:this={form}
 	class="form-control gap-6 px-20 my-10"
-	on:submit|preventDefault={(e) => {
+	on:submit|preventDefault={async (e) => {
 		const formData = extractFormDataUtil(e);
 		const editorData = String(editor.getHTML());
 
@@ -85,7 +85,7 @@
 			editor: editorData
 		};
 
-		const response = fetch('../api/postBlog', {
+		const response = await fetch('../api/postBlog', {
 			method: 'POST',
 			body: JSON.stringify(BLOG),
 			headers: {
@@ -93,9 +93,11 @@
 			}
 		});
 
+		const { statusText } = await response.json();
+
 		editor.commands.clearContent();
 		form.reset();
-		return console.log(BLOG);
+		return console.log(statusText);
 	}}
 >
 	<div class="flex flex-col gap-1">
