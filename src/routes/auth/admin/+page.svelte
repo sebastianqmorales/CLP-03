@@ -14,7 +14,6 @@
 	import orderedListIcon from '$lib/assets/olist-icon.svg';
 	import unorderdListIcon from '$lib/assets/ulist-icon.svg';
 	import Blockquote from '@tiptap/extension-blockquote';
-	import { stringify } from 'postcss';
 
 	let element;
 	let editor;
