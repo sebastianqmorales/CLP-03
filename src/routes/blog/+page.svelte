@@ -3,20 +3,11 @@
 	export let data;
 
 	import ArrowIcon from '$lib/assets/arrow-up-right.svg';
-
-	// format date to be in this format: 9/9/23
-	const formatDate = (date) => {
-		let formattedDate = new Date(date);
-		return formattedDate.toLocaleDateString('en-GB', {
-			year: 'numeric',
-			day: 'numeric',
-			month: 'long'
-		});
-	};
+	import formatDate from '$lib/util/formatDateUtil.js';
 </script>
 
 <!-- come up with a way that the gradients repeat when they reach the limit -->
-<div class="grid grid-cols-2 gap-4 p-6">
+<div class="flex flex-col md:grid md:grid-cols-2 gap-4 p-6">
 	{#each data.blogs as blogs, index}
 		<div class="flex flex-col gap-14 p-6 gradient-{index}">
 			<h1 class="text-white">{blogs.blog_title}</h1>
@@ -26,7 +17,7 @@
 					<div class="text-white">{formatDate(blogs.created_at)}</div>
 				</div>
 				<div class="text-white">{blogs.blog_excerpt}</div>
-				<a class="flex gap-1 text-white hover:underline" href="/">
+				<a class="flex gap-1 text-white hover:underline" href="blog/{blogs.id}">
 					Read post
 					<img src={ArrowIcon} alt="icon" />
 				</a>
