@@ -8,6 +8,11 @@
 	let { created_at, blog_title, blog_excerpt, blog_content, blog_author } = data.blog[0];
 </script>
 
+<svelte:head>
+	<title>{blog_title}</title>
+	<meta name="description" content={blog_excerpt} />
+</svelte:head>
+
 <div class="flex flex-col gap-3 px-5 py-10 md:px-20 md:pt-10 md:pb-20">
 	<div class="flex flex-col items-center">
 		<h1>{blog_title}</h1>
