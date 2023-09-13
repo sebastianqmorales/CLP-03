@@ -9,5 +9,6 @@ export async function load({ locals, params }) {
 		return console.log(error);
 	}
 
+	console.log(params.slug);
 	return { blog };
 }
