@@ -17,7 +17,7 @@
 					<div class="text-white">{formatDate(blogs.created_at)}</div>
 				</div>
 				<div class="text-white">{blogs.blog_excerpt}</div>
-				<a class="flex gap-1 text-white hover:underline" href="blog/{blogs.blog_title}">
+				<a class="flex gap-1 text-white hover:underline" href="blog/{blogs.blog_url}">
 					Read post
 					<img src={ArrowIcon} alt="icon" />
 				</a>

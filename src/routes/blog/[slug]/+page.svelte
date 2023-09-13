@@ -4,12 +4,8 @@
 	export let data;
 
 	import formatDate from '$lib/util/formatDateUtil.js';
-
+	console.log(data);
 	let { created_at, blog_title, blog_excerpt, blog_content, blog_author } = data.blog[0];
-
-	$: {
-		console.log(data.blog[0]);
-	}
 </script>
 
 <div class="flex flex-col gap-3 px-5 py-10 md:px-20 md:pt-10 md:pb-20">

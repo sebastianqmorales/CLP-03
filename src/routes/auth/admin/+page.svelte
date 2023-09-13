@@ -113,12 +113,14 @@
 		placeholder="Title"
 		type="text"
 		name="title"
+		required
 	/>
 	<input
 		class="bg-base-100 border-b border-b-base-300 w-full pb-3 text-xl placeholder:text-xl outline-none"
 		placeholder="Excerpt"
 		type="text"
 		name="excerpt"
+		required
 	/>
 	<div class="flex flex-col border-b border-b-base-300 pb-4 gap-2">
 		{#if editor}

@@ -18,8 +18,6 @@
 
 	$: {
 		currentSlide = Math.round(sliderPosition / (slideWidth + slideGap));
-
-		console.log(`Slider position is: ${sliderPosition}, Current slide is: ${currentSlide}`);
 	}
 
 	const scrollToSlide = (slider, slideIndex) => {
