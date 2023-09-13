@@ -4,7 +4,7 @@
 	export let data;
 
 	import formatDate from '$lib/util/formatDateUtil.js';
-
+	console.log(data);
 	let { created_at, blog_title, blog_excerpt, blog_content, blog_author } = data.blog[0];
 </script>
 
