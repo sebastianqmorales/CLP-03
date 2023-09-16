@@ -13,7 +13,7 @@
 	<meta name="description" content={blog_excerpt} />
 </svelte:head>
 
-<div class="flex flex-col gap-3 px-5 py-10 md:px-20 md:pt-10 md:pb-20">
+<div class="flex flex-col gap-6 px-5 py-10 md:px-20 md:pt-10 md:pb-20">
 	<div class="flex flex-col items-center">
 		<h1>{blog_title}</h1>
 		<p class="text-secondary-content">{blog_excerpt}</p>
