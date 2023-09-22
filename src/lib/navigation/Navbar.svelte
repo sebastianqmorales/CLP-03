@@ -94,7 +94,7 @@
 
 		<div class="flex gap-5">
 			<DarkMode />
-			<div class="btn btn-primary normal-case">Sign up for free</div>
+			<div class="btn btn-primary rounded-none normal-case">Sign up for free</div>
 		</div>
 	</div>
 {:else if windowWidth > 640}

@@ -13,14 +13,30 @@
 	<meta name="description" content={blog_excerpt} />
 </svelte:head>
 
-<div class="flex flex-col gap-6 px-5 py-10 md:px-20 md:pt-10 md:pb-20">
-	<div class="flex flex-col items-center">
-		<h1>{blog_title}</h1>
-		<p class="text-secondary-content">{blog_excerpt}</p>
+<div class="flex flex-col gap-6 px-5 pt-10 md:px-20 md:pt-10">
+	<div class="flex flex-col gradient-0 p-10">
+		<h1 class="self-center text-white">{blog_title}</h1>
+		<p class="self-center text-white">{blog_excerpt}</p>
+		<div class="flex justify-between pt-10">
+			<div class="text-white">By {blog_author}</div>
+			<div class="text-white">{formatDate(created_at)}</div>
+		</div>
 	</div>
-	<div class="flex justify-between">
-		<div>By {blog_author}</div>
-		<div class="text-secondary-content">{formatDate(created_at)}</div>
+	<div class="backdrop-blur-md bg-base-200 p-10">
+		<div>{@html blog_content}</div>
 	</div>
-	<div>{@html blog_content}</div>
 </div>
+
+<style>
+	.custom-blur {
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.3);
+
+		/* Background blur / lg */
+		backdrop-filter: blur(12px);
+	}
+
+	.gradient-0 {
+		background: linear-gradient(164deg, #331d39 20.86%, rgba(51, 29, 57, 0.85) 70.49%);
+	}
+</style>
