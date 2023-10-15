@@ -7,18 +7,18 @@
 </script>
 
 <!-- come up with a way that the gradients repeat when they reach the limit -->
-<div class="min-h-[800px]">
-	<div class="flex flex-col md:grid md:grid-cols-2 md:justify-items-center p-6">
+<div class="">
+	<div class="flex flex-col gap-3 md:grid md:grid-cols-2 md:justify-items-center p-6">
 		{#each data.blogs as blogs, index}
-			<div class="flex flex-col gap-14 p-6 gradient-{index} lg:w-[500px]">
+			<div class="flex flex-col gap-14 p-6 gradient-{index} w-full h-auto">
 				<h1 class="text-white">{blogs.blog_title}</h1>
-				<div class="flex flex-col gap-2 custom-blur px-6 py-8">
+				<div class="flex flex-col gap-4 custom-blur px-6 py-8">
 					<div class=" flex justify-between">
 						<div class="text-white">By {blogs.blog_author}</div>
 						<div class="text-white">{formatDate(blogs.created_at)}</div>
 					</div>
 					<div class="text-white">{blogs.blog_excerpt}</div>
-					<a class="flex gap-1 text-white hover:underline" href="blog/{blogs.blog_url}">
+					<a class="flex gap-1 text-white font-semibold tracking-wide hover:underline" href="blog/{blogs.blog_url}">
 						Read post
 						<img src={ArrowIcon} alt="icon" />
 					</a>
