@@ -82,7 +82,7 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 {#if windowWidth > 767}
-	<div class="flex justify-between items-center md:px-10 md:pt-4 md:pb-1">
+	<div class="flex justify-between items-center md:px-10 md:pt-4 md:pb-1 max-w-7xl mx-auto">
 		<div class="flex gap-4 md:gap-7 items-center">
 			<a href="/">
 				<img alt="Cuatex" src={FullLogoWhite} />
