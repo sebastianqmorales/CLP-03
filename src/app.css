@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-2xl font-bold;
+	}
+	h2 {
+		@apply text-xl font-semibold;
+	}
+	strong {
+		@apply font-bold;
+	}
+	blockquote {
+		@apply border-l-2 border-base-300 pl-2;
+	}
+}
+
+.gradient-0 {
+	background: linear-gradient(164deg, #331d39 20.86%, rgba(51, 29, 57, 0.85) 70.49%);
+}
+
+.gradient-1 {
+	background: linear-gradient(164deg, #055833 20.86%, rgba(5, 88, 51, 0.85) 70.49%);
+}
+
+.gradient-2 {
+	background: linear-gradient(20deg, #1d2939 32.27%, rgba(29, 41, 57, 0.8) 75.38%);
+}
+
+.gradient-3 {
+	background: linear-gradient(20deg, #40451f 32.27%, rgba(64, 69, 31, 0.8) 75.38%);
+}
+.gradient-4 {
+	background: linear-gradient(20deg, #1f453e 32.27%, rgba(31, 69, 62, 0.8) 75.38%);
+}
+.gradient-5 {
+	background: linear-gradient(20deg, #45361f 32.27%, rgba(69, 54, 31, 0.8) 75.38%);
+}
+.gradient-6 {
+	background: linear-gradient(20deg, #45361f 32.27%, rgba(69, 54, 31, 0.8) 75.38%);
+}
