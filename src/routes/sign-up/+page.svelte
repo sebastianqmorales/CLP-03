@@ -5,7 +5,8 @@
 </script>
 
 <div
-	class="flex flex-col max-w-2xl mx-auto px-3 py-6 sm:p-10 md:px-10 md:py-20 justify-center gap-10 sm:gap-20 xl:gap-28"
+	class="flex flex-col max-w-2xl mx-auto my-5 px-3 py-6 sm:p-10 md:px-10
+	md:py-20 justify-center gap-10 sm:gap-20 xl:gap-28 bg-gradient-to-b from-base-200 to-base-100"
 >
 	<div class="flex flex-col items-center gap-5 sm:px-10">
 		<div class="flex flex-col items-center gap-1">
@@ -43,29 +44,9 @@
 				placeholder="you@company.com"
 			/>
 		</div>
-		<!-- <fieldset>
-			<div class="form-control max-w-[130px]">
-				<label class="label cursor-pointer">
-					<span class="">Creator</span>
-					<input type="radio" name="type" class="radio radio-sm" checked />
-				</label>
-			</div>
-			<div class="form-control max-w-[130px]">
-				<label class="label cursor-pointer">
-					<span class="">Audience</span>
-					<input type="radio" name="type" class="radio radio-sm" />
-				</label>
-			</div>
-			<div class="form-control max-w-[130px]">
-				<label class="label cursor-pointer">
-					<span class="">B2B</span>
-					<input type="radio" name="type" class="radio radio-sm" />
-				</label>
-			</div>
-		</fieldset> -->
 		<div class="flex flex-col gap-1">
 			<div class="text">
-				What type of user are you? <span class="text-secondary-content text-sm"
+				What type of customer are you? <span class="text-secondary-content text-sm"
 					>This does not have an effect on your account.</span
 				>
 			</div>
