@@ -15,20 +15,22 @@
 	<meta name="description" content={blog_excerpt} />
 </svelte:head>
 
-<div class="flex flex-col gap-6 px-5 py-10 max-w-[1300px] mx-auto md:px-20 md:pb-20">
-	<a href="/blog" class="btn-neutral cursor-pointer w-[100px] pr-2 py-1 flex gap-1 justify-center">
-		<img class="scale-x-[-1]" src={ArrowIcon} alt="icon" />
-		Back
-	</a>
-	<div class="flex flex-col gradient-{blog_gradient} p-10 gap-3">
-		<div class="flex flex-col px-16 gap-3">
-			<h1 class="self-center text-white lg:text-3xl">{blog_title}</h1>
-			<p class="self-center text-white lg:text-lg">{blog_excerpt}</p>
+<div class="flex flex-col px-1 pb-10 max-w-[1300px] mx-auto md:px-20 md:pb-20">
+	<div class="flex flex-col gradient-{blog_gradient} px-3 py-5 gap-4 sm:p-10 sm:gap-3">
+		<a
+			href="/blog"
+			class="mb-4 btn-neutral cursor-pointer w-[100px] pr-2 py-1 flex gap-1 justify-center"
+		>
+			<img class="scale-x-[-1]" src={ArrowIcon} alt="icon" />
+			Back
+		</a>
+
+		<h1 class=" text-white lg:text-3xl">{blog_title}</h1>
+		<div class="flex flex-col">
+			<div class="text-gray-200 lg:text-lg">By {blog_author}</div>
+			<div class="text-gray-200 text-sm lg:text-lg">{formatDate(created_at)}</div>
 		</div>
-		<div class="flex justify-between pt-10">
-			<div class="text-white lg:text-lg">By {blog_author}</div>
-			<div class="text-white lg:text-lg">{formatDate(created_at)}</div>
-		</div>
+		<p class="self-center text-white text-lg lg:text-lg">{blog_excerpt}</p>
 	</div>
 	<div class="backdrop-blur-md bg-base-200 p-10">
 		<div class=" flex flex-col gap-3 lg:gap-8 lg:text-xl lg:leading-loose">
