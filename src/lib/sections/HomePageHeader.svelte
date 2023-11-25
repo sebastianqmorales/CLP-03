@@ -22,14 +22,12 @@
 				><a href="/" class="text-success underline"> money</a></strong
 			> and end corporate manipulation.
 		</div>
-		<div
-			class="flex flex-col gap-3 md:flex md:flex-row md:justify-evenly md:justify-self-start lg:px-10"
-		>
-			<div class="btn 2xl:btn-lg normal-case">
+		<div class="flex flex-col gap-3 sm:self-start md:gap-16 md:flex md:flex-row">
+			<div class="btn 2xl:btn-lg normal-case rounded-none">
 				<img src={demoIcon} alt="icon" />
 				Demo
 			</div>
-			<div class="btn 2xl:btn-lg btn-primary normal-case">Sign up</div>
+			<div class="btn 2xl:btn-lg btn-primary normal-case rounded-none">Sign up</div>
 		</div>
 	</div>
 	<div class="flex flex-col gap-3 items-center lg:w-2/4">
