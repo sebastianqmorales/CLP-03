@@ -27,8 +27,12 @@
 			behavior: 'smooth'
 		});
 	};
+
+	let viewWidth; 
 </script>
 
+
+<svelte:window bind:innerWidth={viewWidth}/>
 <div class="h-[500px] overflow-hidden flex flex-col lg:items-center">
 	<ul
 		bind:this={sliderRef}
@@ -57,6 +61,7 @@
 			</li>
 		{/each}
 	</ul>
+	{#if viewWidth < 1023}
 	<div class="flex gap-5">
 		<button
 			on:click={() => {
@@ -77,10 +82,11 @@
 			<img src={ChevronRight} alt="chevron left" />
 		</button>
 	</div>
+	{/if}
 </div>
 
 <style>
-	.green-gradient {
+.green-gradient {
 		background: linear-gradient(340deg, #055833 0%, rgba(12, 236, 135, 0.92) 100%);
 	}
 	.orange-gradient {
