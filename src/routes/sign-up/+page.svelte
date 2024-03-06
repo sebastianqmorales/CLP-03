@@ -2,6 +2,8 @@
 	// @ts-nocheck
 
 	import extractFormDataUtil from '$lib/util/extractFormDataUtil';
+
+	let form;
 </script>
 
 <div
@@ -18,10 +20,24 @@
 		</div>
 	</div>
 	<form
+		bind:this={form}
 		class="flex flex-col gap-8"
-		on:submit|preventDefault={(e) => {
+		on:submit|preventDefault={async (e) => {
 			const formData = extractFormDataUtil(e);
+
+			const response = await fetch('../api/postUserForm', {
+				method: 'POST',
+				body: JSON.stringify(formData),
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			});
+
+			const { statusText } = await response.json();
+
 			console.log(formData);
+			form.reset();
+			return console.log(statusText, response);
 		}}
 	>
 		<div class="flex flex-col">
@@ -54,7 +70,7 @@
 				<input
 					class="join-item btn normal-case rounded-none"
 					type="radio"
-					name="user-type"
+					name="usertype"
 					value="audience-user-type"
 					aria-label="Audience"
 					checked
@@ -62,14 +78,14 @@
 				<input
 					class="join-item btn normal-case rounded-none"
 					type="radio"
-					name="user-type"
+					name="usertype"
 					value="creator-user-type"
 					aria-label="Creator"
 				/>
 				<input
 					class="join-item btn normal-case rounded-none"
 					type="radio"
-					name="user-type"
+					name="usertype"
 					value="b2b-user-type"
 					aria-label="B2B"
 				/>
@@ -82,6 +98,7 @@
 				class="textarea border-base-300 rounded-none"
 				rows="4"
 				placeholder="Give us some feedback..."
+				type="text"
 			/>
 		</div>
 
