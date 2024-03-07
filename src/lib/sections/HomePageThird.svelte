@@ -67,7 +67,7 @@
 		</div>
 	</div>
 
-	<div class="btn btn-primary normal-case">Create account</div>
+	<a class="btn btn-primary normal-case" href="/sign-up">Create account</a>
 </div>
 
 <div class="px-3 pt-6 pb-20">

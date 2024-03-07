@@ -2,7 +2,6 @@
 	// @ts-nocheck
 
 	import extractFormDataUtil from '$lib/util/extractFormDataUtil';
-	import { onMount } from 'svelte';
 	import toast, { Toaster } from 'svelte-french-toast';
 
 	let form;
