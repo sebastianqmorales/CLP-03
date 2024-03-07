@@ -18,6 +18,7 @@ export default {
 					'base-content': '#ffff',
 					'neutral-content': '#E8E8E8',
 					'secondary-content': '#aaaaaa',
+					error: '#FF0404',
 					neutral: '#2a323c',
 					accent: '#026AA2',
 					success: '#039855',
@@ -28,6 +29,7 @@ export default {
 				},
 				light: {
 					...require('daisyui/src/theming/themes')['[data-theme=light]'],
+					error: '#FF0404',
 					primary: '#FF550D',
 					'primary-content': '#ffff',
 					secondary: '#FE7B43',

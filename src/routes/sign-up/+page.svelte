@@ -2,10 +2,13 @@
 	// @ts-nocheck
 
 	import extractFormDataUtil from '$lib/util/extractFormDataUtil';
+	import { onMount } from 'svelte';
+	import toast, { Toaster } from 'svelte-french-toast';
 
 	let form;
 </script>
 
+<Toaster />
 <div
 	class="flex flex-col max-w-2xl mx-auto my-5 px-3 py-6 sm:p-10 md:px-10
 	md:py-20 justify-center gap-10 sm:gap-20 xl:gap-28 bg-gradient-to-b from-base-200 to-base-100"
@@ -19,6 +22,7 @@
 			Claim your username, start off with money in your account, have an impact on the product.
 		</div>
 	</div>
+
 	<form
 		bind:this={form}
 		class="flex flex-col gap-8"
@@ -35,9 +39,14 @@
 
 			const { statusText } = await response.json();
 
-			console.log(formData);
+			if (statusText == 'Created') {
+				toast.success('Form submitted successfully.');
+			} else {
+				toast.error('There was an issue');
+			}
+
 			form.reset();
-			return console.log(statusText, response);
+			return console.log(statusText);
 		}}
 	>
 		<div class="flex flex-col">
