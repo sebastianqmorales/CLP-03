@@ -23,11 +23,11 @@
 			> and end corporate manipulation.
 		</div>
 		<div class="flex flex-col gap-3 sm:self-start md:gap-16 md:flex md:flex-row">
-			<div class="btn 2xl:btn-lg normal-case rounded-none">
+			<a href="/sign-up" class="btn 2xl:btn-lg normal-case rounded-none">
 				<img src={demoIcon} alt="icon" />
 				Demo
-			</div>
-			<div class="btn 2xl:btn-lg btn-primary normal-case rounded-none">Sign up</div>
+			</a>
+			<a href="/sign-up" class="btn 2xl:btn-lg btn-primary normal-case rounded-none">Sign up</a>
 		</div>
 	</div>
 	<div class="flex flex-col gap-3 items-center lg:w-2/4">
