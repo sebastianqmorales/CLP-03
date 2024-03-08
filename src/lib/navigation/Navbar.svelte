@@ -87,9 +87,12 @@
 			<a href="/">
 				<img alt="Cuatex" src={FullLogoWhite} />
 			</a>
-			<Dropdown {props} />
-			<a class="" href="/platform">Platform</a>
-			<a class="" href="/blog">Blog</a>
+			<!-- <Dropdown {props} /> -->
+			<!-- <a class="" href="/platform">Platform</a> -->
+			<a
+				class="transition ease-in-out delay-80 hover:-translate-y-1 hover:scale-110 hover:text-orange-500 duration-300"
+				href="/blog">Blog</a
+			>
 		</div>
 
 		<div class="flex gap-5">
@@ -142,13 +145,13 @@
 				<div
 					class="w-[100vw] h-auto bg-base-200 absolute top-12 right-0 flex flex-col px-1 py-2 gap-2"
 				>
-					<Dropdown {props} />
-					<a class="" href="/platform">Platform</a>
+					<!-- <Dropdown {props} /> -->
+					<!-- <a class="" href="/platform">Platform</a> -->
 					<a class="" href="/blog">Blog</a>
 				</div>
 			{/if}
 			<DarkMode />
-			<div class="btn btn-primary normal-case">Sign up</div>
+			<a href="sign-up" class="btn btn-primary normal-case">Sign up</a>
 		</div>
 	</div>
 {:else}
@@ -196,10 +199,10 @@
 				<div
 					class="w-[100vw] h-auto bg-base-200 absolute top-12 right-0 flex flex-col px-1 py-2 gap-2 z-20"
 				>
-					<Dropdown {props} />
-					<a class="font-semibold text-lg md:font-normal md:text-base" href="/platform">Platform</a>
+					<!-- <Dropdown {props} /> -->
+					<!-- <a class="font-semibold text-lg md:font-normal md:text-base" href="/platform">Platform</a> -->
 					<a class="font-semibold text-lg md:font-normal md:text-base" href="/blog">Blog</a>
-					<div class="btn btn-primary normal-case">Sign up for free</div>
+					<a href="sign-up" class="btn btn-primary normal-case">Sign up for free</a>
 				</div>
 			{/if}
 			<DarkMode />
