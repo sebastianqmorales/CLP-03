@@ -22,7 +22,7 @@
 					<div class="text-white">{blogs.blog_excerpt}</div>
 					<a
 						class="flex gap-1 text-white font-semibold tracking-wide hover:underline"
-						href="blog/{blogs.blog_url}"
+						href="/blog/{blogs.blog_url}"
 					>
 						Read post
 						<img src={ArrowIcon} alt="icon" />

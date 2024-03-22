@@ -5,6 +5,7 @@
 
 	import ArrowIcon from '$lib/assets/arrow-up-right.svg';
 	import formatDate from '$lib/util/formatDateUtil.js';
+	import CtaSection from '$lib/components/CtaSection.svelte';
 	console.log(data);
 	let { created_at, blog_title, blog_excerpt, blog_content, blog_author, blog_gradient } =
 		data.blog[0];
@@ -38,6 +39,7 @@
 		</div>
 	</div>
 </div>
+<CtaSection />
 
 <style>
 	.custom-blur {
