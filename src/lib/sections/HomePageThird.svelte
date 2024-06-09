@@ -15,7 +15,7 @@
 			subTitle: 'Microtransactions',
 			description:
 				"Our business model allows you to earn endless amounts from your comments, content and data. Even if you don't post content, you can still earn at a profit.",
-			link: '/'
+			link: '/blog/Earn-money-from-your-social-media-use'
 		},
 		{
 			title: 'Kill Big Brother',
