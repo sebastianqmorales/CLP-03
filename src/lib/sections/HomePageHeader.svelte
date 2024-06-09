@@ -19,15 +19,15 @@
 			and sell it as low as half a cent per view. We have engineered transparency into our product,
 			allowing you to create algorithms, vote and own your content. All of which create a better
 			online community, make you <strong
-				><a href="/" class="text-success underline"> money</a></strong
+				><a href="/blog/Earn-money-from-your-social-media-use" class="text-success underline"> money</a></strong
 			> and end corporate manipulation.
 		</div>
 		<div class="flex flex-col gap-3 sm:self-start md:gap-16 md:flex md:flex-row">
-			<div class="btn 2xl:btn-lg normal-case rounded-none">
+			<a href="/sign-up" class="btn 2xl:btn-lg normal-case rounded-none">
 				<img src={demoIcon} alt="icon" />
 				Demo
-			</div>
-			<div class="btn 2xl:btn-lg btn-primary normal-case rounded-none">Sign up</div>
+			</a>
+			<a href="/sign-up" class="btn 2xl:btn-lg btn-primary normal-case rounded-none">Sign up</a>
 		</div>
 	</div>
 	<div class="flex flex-col gap-3 items-center lg:w-2/4">
