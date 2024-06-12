@@ -15,6 +15,7 @@
 	let slideGap = 16;
 	let sliderRef;
 	let currentSlide;
+	let colorState;
 
 	$: {
 		currentSlide = Math.round(sliderPosition / (slideWidth + slideGap));
@@ -28,11 +29,10 @@
 		});
 	};
 
-	let viewWidth; 
+	let viewWidth;
 </script>
 
-
-<svelte:window bind:innerWidth={viewWidth}/>
+<svelte:window bind:innerWidth={viewWidth} />
 <div class="h-[500px] overflow-hidden flex flex-col lg:items-center">
 	<ul
 		bind:this={sliderRef}
@@ -62,31 +62,75 @@
 		{/each}
 	</ul>
 	{#if viewWidth < 1023}
-	<div class="flex gap-5">
-		<button
-			on:click={() => {
-				scrollToSlide(sliderRef, currentSlide - 1);
-			}}
-			class="disabled:border-gray-400 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
-		>
-			<span class="sr-only">Previous slide</span>
-			<img src={ChevronLeft} alt="chevron left" />
-		</button>
-		<button
-			on:click={() => {
-				scrollToSlide(sliderRef, currentSlide + 1);
-			}}
-			class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full"
-		>
-			<span class="sr-only">Next slide</span>
-			<img src={ChevronRight} alt="chevron left" />
-		</button>
-	</div>
+		<div class="flex gap-5">
+			<button
+				on:click={() => {
+					scrollToSlide(sliderRef, currentSlide - 1);
+				}}
+				on:mouseenter={() => {
+					colorState = `stroke-orange-400`;
+				}}
+				on:mouseleave={() => {
+					colorState = `stroke-[#FF550D]`;
+				}}
+				class="disabled:border-gray-400 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full hover:border-orange-400"
+			>
+				<span class="sr-only">Previous slide</span>
+				<!-- <img src={ChevronLeft} alt="chevron left" /> -->
+				<svg
+					width="8"
+					height="14"
+					viewBox="0 0 8 14"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						class={colorState}
+						d="M7 13L1 7L7 1"
+						stroke="#FF550D"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</button>
+			<button
+				on:click={() => {
+					scrollToSlide(sliderRef, currentSlide + 1);
+				}}
+				on:mouseenter={() => {
+					colorState = `stroke-orange-400`;
+				}}
+				on:mouseleave={() => {
+					colorState = `stroke-[#FF550D]`;
+				}}
+				class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full hover:border-orange-400"
+			>
+				<span class="sr-only">Next slide</span>
+				<!-- <img src={ChevronRight} alt="chevron right" /> -->
+				<svg
+					width="8"
+					height="14"
+					viewBox="0 0 8 14"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						class={colorState}
+						d="M1 13L7 7L1 1"
+						stroke="#FF550D"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</button>
+		</div>
 	{/if}
 </div>
 
 <style>
-.green-gradient {
+	.green-gradient {
 		background: linear-gradient(340deg, #055833 0%, rgba(12, 236, 135, 0.92) 100%);
 	}
 	.orange-gradient {
