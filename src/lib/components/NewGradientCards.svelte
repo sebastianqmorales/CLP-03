@@ -15,7 +15,8 @@
 	let slideGap = 16;
 	let sliderRef;
 	let currentSlide;
-	let colorState;
+	let colorState_1;
+	let colorState_2;
 
 	$: {
 		currentSlide = Math.round(sliderPosition / (slideWidth + slideGap));
@@ -68,10 +69,10 @@
 					scrollToSlide(sliderRef, currentSlide - 1);
 				}}
 				on:mouseenter={() => {
-					colorState = `stroke-orange-400`;
+					colorState_1 = `stroke-orange-400`;
 				}}
 				on:mouseleave={() => {
-					colorState = `stroke-[#FF550D]`;
+					colorState_1 = `stroke-[#FF550D]`;
 				}}
 				class="disabled:border-gray-400 flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full hover:border-orange-400"
 			>
@@ -85,7 +86,7 @@
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path
-						class={colorState}
+						class={colorState_1}
 						d="M7 13L1 7L7 1"
 						stroke="#FF550D"
 						stroke-width="2"
@@ -99,10 +100,10 @@
 					scrollToSlide(sliderRef, currentSlide + 1);
 				}}
 				on:mouseenter={() => {
-					colorState = `stroke-orange-400`;
+					colorState_2 = `stroke-orange-400`;
 				}}
 				on:mouseleave={() => {
-					colorState = `stroke-[#FF550D]`;
+					colorState_2 = `stroke-[#FF550D]`;
 				}}
 				class="flex items-center justify-center border-2 w-8 h-8 border-primary rounded-full hover:border-orange-400"
 			>
@@ -116,7 +117,7 @@
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path
-						class={colorState}
+						class={colorState_2}
 						d="M1 13L7 7L1 1"
 						stroke="#FF550D"
 						stroke-width="2"
