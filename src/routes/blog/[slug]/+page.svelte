@@ -27,9 +27,14 @@
 		</a>
 
 		<h1 class=" text-white lg:text-3xl">{blog_title}</h1>
-		<div class="flex flex-col">
-			<div class="text-gray-200 lg:text-lg">By {blog_author}</div>
-			<div class="text-gray-200 text-sm lg:text-lg">{formatDate(created_at)}</div>
+		<div class="flex gap-3 items-center">
+			<a
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://www.linkedin.com/in/sebastian-q-morales/"
+				class="text-gray-100 text-md hover:underline">By {blog_author}</a
+			>
+			<div class="text-gray-100 text-md">{formatDate(created_at)}</div>
 		</div>
 		<p class="self-center text-white text-lg lg:text-lg">{blog_excerpt}</p>
 	</div>
