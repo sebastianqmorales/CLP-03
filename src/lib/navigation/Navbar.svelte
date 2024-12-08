@@ -89,10 +89,10 @@
 			</a>
 			<!-- <Dropdown {props} /> -->
 			<!-- <a class="" href="/platform">Platform</a> -->
-			<a
+			<!-- <a
 				class="transition ease-in-out delay-80 hover:-translate-y-1 hover:scale-110 hover:text-orange-500 duration-300"
 				href="/blog">Blog</a
-			>
+			> -->
 		</div>
 
 		<div class="flex gap-5">
@@ -147,7 +147,7 @@
 				>
 					<!-- <Dropdown {props} /> -->
 					<!-- <a class="" href="/platform">Platform</a> -->
-					<a class="" href="/blog">Blog</a>
+					<!-- <a class="" href="/blog">Blog</a> -->
 				</div>
 			{/if}
 			<DarkMode />
@@ -201,7 +201,7 @@
 				>
 					<!-- <Dropdown {props} /> -->
 					<!-- <a class="font-semibold text-lg md:font-normal md:text-base" href="/platform">Platform</a> -->
-					<a class="font-semibold text-lg md:font-normal md:text-base" href="/blog">Blog</a>
+					<!-- <a class="font-semibold text-lg md:font-normal md:text-base" href="/blog">Blog</a> -->
 					<a href="sign-up" class="btn btn-primary normal-case">Sign up for free</a>
 				</div>
 			{/if}

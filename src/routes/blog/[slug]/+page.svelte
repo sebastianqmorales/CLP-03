@@ -16,7 +16,7 @@
 	<meta name="description" content={blog_excerpt} />
 </svelte:head>
 
-<div class="flex flex-col px-1 pb-10 max-w-[1300px] mx-auto md:px-20 md:pb-20">
+<div class="flex flex-col px-1 py-10 max-w-[1300px] mx-auto md:px-20 md:pb-20">
 	<div class="flex flex-col gradient-{blog_gradient} px-3 py-5 gap-4 sm:p-10 sm:gap-3">
 		<a
 			href="/blog"
@@ -33,8 +33,8 @@
 		</div>
 		<p class="self-center text-white text-lg lg:text-lg">{blog_excerpt}</p>
 	</div>
-	<div class="backdrop-blur-md bg-base-200 p-10">
-		<div class=" flex flex-col gap-3 lg:gap-8 lg:text-xl lg:leading-loose">
+	<div class=" p-10">
+		<div class=" flex flex-col gap-3 font-medium lg:tracking-tighter lg:gap-8 lg:text-xl lg:leading-relaxed">
 			{@html blog_content}
 		</div>
 	</div>
